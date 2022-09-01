@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estimativa das perdas</title>
+</head>
+<body>
+    <center>
+        <h1> CALCULANDO SUAS PERDAS!! </h1> <br>
+        <br>
+        Digite o valor da sua carne por kg: <input type="number" id="input_preco_carne"> <br>
+        Digite suas perdas mensais totais: <input type="number" id="input_perdas_totais"> <br>
+        <br>
+        <button onclick="calculo_perdas()"><b>CALCULAR PERDAS</b></button>
+        <div id="div_calculos"></div>
+    </center>
+
+</body>
+</html>
+
+<script>
+    function calculo_perdas(){
+        var preco_porKg = Number(input_preco_carne.value);
+        var perdas_totais = Number(input_perdas_totais.value);
+
+        var descontrole_temp_umid = perdas_totais * 0.3;
+        var economia_descontrole = descontrole_temp_umid * 0.5;
+
+        div_calculos.innerHTML = `
+        ================================================================= <br>
+        Preço da carne/kg: R$${preco_porKg} <br>
+        Sua perda total por mês: R$${perdas_totais} <br>
+        Perda somente pelo descontrole de temperatura e umidade: R$${descontrole_temp_umid} <br>
+        <br>
+        <br>
+            <b> Após contratação dos nossos serviços: </b> <br>
+        Perda pelo descontrole de temperatura/umidade:: R$ ${economia_descontrole} <br>
+        =================================================================
+
+        `
+    }
+    //Para a calculadora: 
+    // • Preço por kg;
+    // • Estipular media de perda de carne pelo descontrole de temperatura 3% total;
+    // • Coletar valor perda mensais ;
+    // • Dar resultado de economia pelo controle de temperatura;
+
+</script>
+
+
+<!-- Referencias:
+https://www.iagro.ms.gov.br/perdas-durante-o-resfriamento-de-carcacas-bovinas/  : 3% de perda
+
+-->
