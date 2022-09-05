@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Meat Health</title>
+    <link rel="stylesheet" href="estiloCalculadora.css">
 </head>
 <body>
     <center>
-        <h1> CALCULANDO SUAS PERDAS!! </h1> <br>
-        <br>
-        Digite o valor da sua carne por kg (carne/kg): <input type="number" id="input_preco_carne"> <br>
-        Digite suas perdas mensais totais: <input type="number" id="input_ganhos_totais"> <br>
-        <br>
-        <button onclick="calculo_perdas()"><b>CALCULAR PERDAS</b></button>
-        <div id="div_calculos"></div>
-    </center>
-
+    <header>
+        
+        <div class="conteiner"></div>
+            <div class="titulo conteiner1">
+                <h1> CALCULANDO SUAS PERDAS!! </h1> <br>
+            </div>
+            <br>
+            <div class="dados">
+                Digite o valor da sua carne por kg (carne/kg): <input type="number" id="input_preco_carne"> <br>
+                Digite seus ganhos mensais: <input type="number" id="input_ganhos_totais"> <br>
+            </div>
+            <div class="botao">
+            <button onclick="calculo_perdas()"><b>CALCULAR PERDAS</b></button>
+            </div>
+            <div id="div_calculos"></div>
+        </div>
+    </header>
+</center>
 </body>
 </html>
 
@@ -26,8 +36,7 @@
         var ganhos_totais = Number(input_ganhos_totais.value);
 
 
-        var perda_total = ganhos_totais * 0.3;
-        var perda_descontrole_temp_umid = perda_total * 0.03;
+        var perda_descontrole_temp_umid = ganhos_totais * 0.3;
         var economia_descontrole = perda_descontrole_temp_umid * 0.5;
 
         var ganhos_futuros = ganhos_totais + economia_descontrole;
@@ -39,9 +48,8 @@
         Seus ganhos por mês: <b>R$${ganhos_totais}</b> <br>
         
         <br> <b>Com base no seus ganhos atuais:</b> <br>
-        Estimamos que sua perda mensal, seja de <b>R$${perda_total}</b> <br>
-        e desse valor, a perda pelo descontrole <br> 
-        de temperatura e umidade, seja de <b>R$${perda_descontrole_temp_umid}</b> <br>
+        Estimamos que sua perda pelo descontrole <br> 
+        de temperatura e umidade, seja de <b> R$${perda_descontrole_temp_umid}</b> <br>
         <br>
         <br>
             <b> Após contratação dos nossos serviços: </b> <br>
