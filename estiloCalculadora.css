@@ -1,16 +1,53 @@
 * {
     margin: 0px;
-    padding: px;
+    padding: 0px;
     box-sizing: border-box;
-
 }
 
-/* header{
-    background-color: black;
-} */
+body{
+    background-color: #dfdddd;
+}
 
-.container{
-    width: 80%;
+header{
+    text-align: center;
+    padding: 15px 0;
+}
+
+.conteiner{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+img {
+    width: 500px;
+    flex-direction: row;
+}
+
+
+.conteiner1{
+    width: 1300px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.imagem1{
+    max-width: 20%;
+    max-height: 50%;
+    display: flex;;
+    justify-content: flex-start;
+}
+
+.conteiner2{
+    background-color: #ff0000;
+    width: 100%;
     color: white;
     margin: 0 auto;
     display: flex;
@@ -18,20 +55,67 @@
     align-items: center;
     justify-content: center;
 }
-.titulo{
-    background-color: rgb(252, 59, 59);
-    color: rgb(0, 0, 0);
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+h2{
+    color: #FFFFFF;
+    text-align: center;  
+    align-items: center; 
     justify-content: center;
+    cursor: pointer;
 }
-.dados{
-    background-color: 	#FA8072;
+
+.conteiner3{
+    display: flex;
+    padding: 40px 0px 30px 100px;
+    width: 700px;
+    font-size: medium;
+}
+
+.conteiner4{
+    display: flex;
+    padding: 0px 0px 20px 80px;
+    flex-direction: column;
+    font-size: medium;
+}
+
+.ganhos_texto{
+    width:max-content;
+}
+
+.flex_input{
+    display: flex;
+    padding: 0px 0px 0px 114px;
+    flex-direction: row;
+    width: max-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.texto_input{
+    display: flex;
+    align-items: center;
+}
+
+.conteiner5{
+    display: flex;
+    padding: 0px 0px 20px 250px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+.conteiner6{
+    width: 1300px;
+    height: 150px;
     margin: 0 auto;
+    padding: 100px 0px 0px 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
